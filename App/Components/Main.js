@@ -73,16 +73,18 @@ var styles = StyleSheet.create({
  button: {
    height: 40,
    marginTop: 10,
-   alignItems: 'center',
+   left: 5,
+   width: 200,
    justifyContent: 'center',
    backgroundColor: '#ED7A3A',
  },
  buttonText: {
-  color:'white'
+  color:'white',
+  textAlign: 'center',
  },
  buttonPads: {
-  paddingRight: 50,
-  paddingLeft: 50
+  // paddingRight: 150,
+  // paddingLeft: 150
  },
 placeholder: {
   marginTop: 20,
