@@ -1,9 +1,10 @@
 'use strict';
 
-var React = require('react-native'),
-    employees = require('./employees'),
-    capacity = require('./capacity'),
-    shipments = require('./shipments');
+var React       = require('react-native'),
+    employees   = require('./employees'),
+    capacity    = require('./capacity'),
+    shipments   = require('./shipments'),
+    Sections    = require('./sections');
 
 var {
 	Text,
@@ -50,6 +51,7 @@ class Main extends React.Component {
       </View>
       <View>
         <Text style={styles.placeholder}>---- Sections of Warehouse ----</Text>
+        <Sections />
       </View>
       </View>
     )
