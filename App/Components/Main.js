@@ -1,9 +1,14 @@
 'use strict';
 
+//Instead of Employees, we are going to have Overview.
+//And I will change lowercase->Uppercase.
 var React       = require('react-native'),
-    employees   = require('./employees'),
-    capacity    = require('./capacity'),
-    shipments   = require('./shipments'),
+    //employees   = require('./employees'),
+    Overview    = require('./Overview'),
+    //capacity    = require('./capacity'),
+    Capacity    = require('./Capacity'),
+    //shipments   = require('./shipments'),
+    Shipments   = require('./Shipments'),
     Sections    = require('./sections');
 
 var {
@@ -14,38 +19,38 @@ var {
 } = React;
 
 class Main extends React.Component {
-    employees(){
+    Overview(){
     this.props.navigator.push({
-      title: 'Employees',
-      component: employees,
+      title: 'Overview',
+      component: Overview,
       passProps: {employee: 'Kase'}
     });
   }
-    capacity(){
+    Capacity(){
     this.props.navigator.push({
       title: 'Capacity',
-      component: capacity,
-      passProps: {capacity: '100%'}
+      component: Capacity,
+      passProps: {Capacity: '100%'}
     });
   }
-    shipments(){
+    Shipments(){
     this.props.navigator.push({
       title: 'New Shipments',
-      component: shipments,
-      passProps: {shipments: 'TELEVISIOOOOOOON'}
+      component: Shipments,
+      passProps: {Shipments: 'TELEVISIOOOOOOON'}
     });
   }
 	render(){
 		return (
       <View style={styles.container}>
       <View style={styles.buttonPads}>
-      <TouchableHighlight style={styles.button} onPress={() => this.employees()}>
-        <Text style={styles.buttonText}>Employee</Text>
+      <TouchableHighlight style={styles.button} onPress={() => this.Overview()}>
+        <Text style={styles.buttonText}>Overview</Text>
       </TouchableHighlight>
-      <TouchableHighlight style={styles.button} onPress={() => this.capacity()}>
+      <TouchableHighlight style={styles.button} onPress={() => this.Capacity()}>
         <Text style={styles.buttonText}>Capacity</Text>
       </TouchableHighlight>
-      <TouchableHighlight style={styles.button} onPress={() => this.shipments()}>
+      <TouchableHighlight style={styles.button} onPress={() => this.Shipments()}>
         <Text style={styles.buttonText}>Shipments</Text>
       </TouchableHighlight>
       </View>

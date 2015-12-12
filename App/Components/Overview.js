@@ -9,7 +9,7 @@ var {
   TouchableHighlight
 } = React;
 
-class Employees extends React.Component {
+class Overview extends React.Component {
 	render(){
 		return (
       <View style={styles.container}>
@@ -34,4 +34,4 @@ var styles = StyleSheet.create({
  },
 });
 
-module.exports = Employees;
+module.exports = Overview;
