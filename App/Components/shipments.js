@@ -45,11 +45,11 @@ class Shipments extends React.Component {
 	        options={ options }
 	        onSelection={ setSelectedOption.bind(this) }
 					//this.state.selectedOption
-	        selectedOption={this.state.selectedOption || "Pod1"}
+	        selectedOption={"Pod1"}
 	        renderOption={ renderOption }
 	        renderContainer={ renderContainer }
 	      />
-	      <Text>Selected option: {this.state.selectedOption || "Pod1" || 'none'}</Text>
+	      <Text>Selected option: {"Pod1" || 'none'}</Text>
 	    </View>);
 	}
 };
