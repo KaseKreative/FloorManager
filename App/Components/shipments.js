@@ -25,7 +25,7 @@ var styles = StyleSheet.create({
   container: {
    flex: 1,
    marginTop: 60,
-   
+
  },
   title: {
    fontSize: 20,
