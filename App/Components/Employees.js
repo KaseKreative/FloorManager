@@ -12,16 +12,15 @@ var {
 
 class Shipments extends React.Component {
   render(){
-    return (
+		return (
       <View style={styles.container}>
-       <Text style={styles.title}>Employees</Text>
-
-      </View>
+			 <Text style={styles.headingOne}>EMPLOYEES OVERVIEW</Text>
+			 <Text style={styles.headingTwo}></Text>
+		  </View>
 
     )
-  }
+	}
 };
-
 
 var styles = StyleSheet.create({
   container: {
@@ -29,11 +28,16 @@ var styles = StyleSheet.create({
    marginTop: 60,
 
  },
-  title: {
-   fontSize: 20,
-   textAlign: 'center',
+  headingOne: {
+   fontSize: 25,
+   textAlign: 'left',
    margin: 10
  },
+ headingTwo: {
+	 fontSize: 15,
+   textAlign: 'left',
+   margin: 10
+ }
 });
 
 module.exports = Shipments;
