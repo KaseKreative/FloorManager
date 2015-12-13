@@ -13,7 +13,7 @@ class Overview extends React.Component {
 	render(){
 		return (
       <View style={styles.container}>
-			 <Text style={styles.title}>{this.props.employee}</Text>
+			 <Text style={styles.title}>Overview</Text>
 		  </View>
 
     )

@@ -13,7 +13,7 @@ class Shipments extends React.Component {
 	render(){
 		return (
       <View style={styles.container}>
-			 <Text style={styles.title}>{this.props.shipments}</Text>
+			 <Text style={styles.title}>Shipments</Text>
 		  </View>
 
     )

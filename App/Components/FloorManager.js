@@ -27,6 +27,7 @@ class FloorManager extends Component {
 	    return (
 	      <TabBarIOS selectedTab={this.state.selectedTab}>
 	        <TabBarIOS.Item
+						title="Overview"
 	          icon={require('../Utils/images/overview.png')}
 	          selected={this.state.selectedTab === 'Overview'}
 	          onPress={() => {
@@ -38,7 +39,8 @@ class FloorManager extends Component {
 	        <Overview/>
 	        </TabBarIOS.Item>
 	        <TabBarIOS.Item
-	          systemIcon='bookmarks'
+						title="Employees"
+	          icon={require('../Utils/images/employee.png')}
 	          selected={this.state.selectedTab === 'Employees'}
 	          onPress={() => {
 	                this.setState({
@@ -48,7 +50,8 @@ class FloorManager extends Component {
 	        <Employees/>
 	        </TabBarIOS.Item>
 	        <TabBarIOS.Item
-	          systemIcon='recents'
+						title="Shipments"
+	          icon={require('../Utils/images/shipment.png')}
 	          selected={this.state.selectedTab === 'Shipments'}
 	          // icon={{uri:'most-viewed'}}
 	          onPress={() => {
