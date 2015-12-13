@@ -21,7 +21,6 @@ class Overview extends React.Component {
 			 <Text style={styles.headingOne}>WAREHOUSE OVERVIEW</Text>
 			 <Text style={styles.headingTwo}>Overview of section A1-26</Text>
 		  </View>
-
     )
 	}
 };
@@ -30,7 +29,6 @@ var styles = StyleSheet.create({
   container: {
    flex: 1,
    marginTop: 60,
-
  },
   headingOne: {
    fontSize: 25,
