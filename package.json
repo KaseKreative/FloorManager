@@ -9,6 +9,7 @@
     "react-native": "^0.16.0",
     "react-native-icons": "^0.7.0",
     "react-native-progress": "^2.2.0",
+    "react-native-radio-button-classic": "0.0.5",
     "react-native-radio-buttons": "^0.6.0"
   }
 }
