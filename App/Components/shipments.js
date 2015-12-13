@@ -7,58 +7,80 @@ var {
   StyleSheet,
   Text,
   View,
+	Component,
   TouchableWithoutFeedback,
+	Radio,
 } = React;
 
-// var Radio = require('react-native-radio-button-classic');
-// var Option = Radio.Option;
+var Radio = require('../../node_modules/react-native-radio-button-classic');
+// var {
+// 	Radio, Option, Item
+// } = Radio;
+var Option = Radio.Option;
+
 
 // import { RadioButtons, SegmentedControls } from 'react-native-radio-buttons';
+class Item extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    var { title, description } = this.props;
+
+    return (
+      <View style={{ paddingTop: 7, paddingLeft: 10 }}>
+        <Text style={styles.title}>{ title }</Text>
+        <Text style={styles.description}>{ description }</Text>
+      </View>
+    );
+  }
+}
 
 class Shipments extends React.Component {
-	render(){
-		return (
-      <View style={styles.container}>
-			 <Text style={styles.headingOne}>Shipments</Text>
-			 <Text style={styles.headingTwo}>Overview of section A1-26</Text>
-		  </View>
-    )
-	}
-	// constructor(props) {
-  //   super(props);
-	//
-  //   this.state = {
-  //     optionSelected: 1
-  //   }
-  // }
-	//
-  // onSelect(index) {
-  //   this.setState({
-  //     optionSelected: index + 1
-  //   });
-  // }
-	//
-  // render() {
-  //   return (
-  //     <View style={{ flex: 1, paddingTop: 20 }}>
-  //       <Radio onSelect={this.onSelect.bind(this)} defaultSelect={this.state.optionSelected - 1}>
-  //         <Option color="gray" selectedColor="#008BEF">
-  //           <Item title="First Options" description="This is your First Option"/>
-  //         </Option>
-  //         <Option color="gray" selectedColor="#008BEF">
-  //           <Item title="Second Options" description="This is your Second Option"/>
-  //         </Option>
-  //         <Option color="gray" selectedColor="#008BEF">
-  //           <Item title="Third Options" description="This is your Third Option"/>
-  //         </Option>
-  //       </Radio>
-	//
-  //       <View style={{ paddingTop: 40 }}>
-  //         <Text>You have selected option {this.state.optionSelected}</Text>
-  //       </View>
-  //     </View>
-  //   );
-  // }
+	// render(){
+	// 	return (
+  //     <View style={styles.container}>
+	// 		 <Text style={styles.headingOne}>Shipments</Text>
+	// 		 <Text style={styles.headingTwo}>Overview of section A1-26</Text>
+	// 	  </View>
+  //   )
+	// }
+
+	constructor(props) {
+    super(props);
+
+    this.state = {
+      optionSelected: 1
+    }
+  }
+
+  onSelect(index) {
+    this.setState({
+      optionSelected: index + 1
+    });
+  }
+
+  render() {
+    return (
+      <View style={{ flex: 1, paddingTop: 20 }}>
+				<Radio onSelect={this.onSelect.bind(this)} defaultSelect={this.state.optionSelected - 1}>
+          <Option color="gray" selectedColor="#008BEF">
+            <Item title="First Options" description="This is your First Option"/>
+          </Option>
+          <Option color="gray" selectedColor="#008BEF">
+            <Item title="Second Options" description="This is your Second Option"/>
+          </Option>
+          <Option color="gray" selectedColor="#008BEF">
+            <Item title="Third Options" description="This is your Third Option"/>
+          </Option>
+        </Radio>
+        <View style={{ paddingTop: 40 }}>
+          <Text>You have selected option {this.state.optionSelected}</Text>
+        </View>
+      </View>
+    );
+  }
 };
 
 var styles = StyleSheet.create({
