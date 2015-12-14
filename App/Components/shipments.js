@@ -13,13 +13,8 @@ var {
 } = React;
 
 var Radio = require('../../node_modules/react-native-radio-button-classic');
-// var {
-// 	Radio, Option, Item
-// } = Radio;
 var Option = Radio.Option;
 
-
-// import { RadioButtons, SegmentedControls } from 'react-native-radio-buttons';
 class Item extends Component {
   constructor(props) {
     super(props);
@@ -38,14 +33,6 @@ class Item extends Component {
 }
 
 class Shipments extends React.Component {
-	// render(){
-	// 	return (
-  //     <View style={styles.container}>
-	// 		 <Text style={styles.headingOne}>Shipments</Text>
-	// 		 <Text style={styles.headingTwo}>Overview of section A1-26</Text>
-	// 	  </View>
-  //   )
-	// }
 
 	constructor(props) {
     super(props);
@@ -66,17 +53,17 @@ class Shipments extends React.Component {
       <View style={{ flex: 1, paddingTop: 20 }}>
 				<Radio onSelect={this.onSelect.bind(this)} defaultSelect={this.state.optionSelected - 1}>
           <Option color="gray" selectedColor="#008BEF">
-            <Item title="First Options" description="This is your First Option"/>
+            <Item title="Pod 1" description="Quantity : , Total Weight: "/>
           </Option>
           <Option color="gray" selectedColor="#008BEF">
-            <Item title="Second Options" description="This is your Second Option"/>
+            <Item title="Pod 2" description="Quantity : , Total Weight: "/>
           </Option>
           <Option color="gray" selectedColor="#008BEF">
-            <Item title="Third Options" description="This is your Third Option"/>
+            <Item title="Pod 3" description="Quantity : , Total Weight: "/>
           </Option>
         </Radio>
         <View style={{ paddingTop: 40 }}>
-          <Text>You have selected option {this.state.optionSelected}</Text>
+          <Text>You have selected Pod {this.state.optionSelected}</Text>
         </View>
       </View>
     );
