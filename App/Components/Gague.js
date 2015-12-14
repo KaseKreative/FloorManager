@@ -4,6 +4,7 @@ var React = require('react-native');
 var {
 	Text,
 	View,
+	Image,
   	StyleSheet,
 } = React;
 
@@ -15,47 +16,35 @@ class Gague extends React.Component {
 	render(){
 		return (
       	<View style={styles.container}>
+      	<View style={styles.sectionImage}>
+      	<Image source={require('../Utils/images/secA1-27-01.png')} />
+      	</View>
 
 	      <View style={styles.circles}>
+	      <Text style={styles.progLable}>Space Available</Text>
           <Progress.Circle
-           showsText={true}
+            size={100}
+            showsText={true}
             style={styles.progress}
-            progress={0.5}
-            indeterminate={true} />
-
-          <Progress.Pie
-            style={styles.progress}
-            progress={0.4}
-            indeterminate={true} />
-
-          <Progress.Circle
-            style={styles.progress}
-            progress={0.4}
-            indeterminate={false}
-            direction="counter-clockwise" />
-        
-          <Progress.CircleSnail
-           style={styles.progress}
-           color={[
-              '#F44336',
-              '#2196F3',
-              '#009688',
-           	]} />
+            progress={ 0.4 }
+            indeterminate={false} />
           </View>
-
 		</View>
     )
 	}
 };
 
 var styles = StyleSheet.create({
-  container: {
-   flex: 1,
-   marginTop: 60,
- },
+sectionImage: {
+	flexDirection: 'row',
+    alignItems: 'center',
+},
  circles: {
     flexDirection: 'row',
     alignItems: 'center',
+  },
+  progLable: {
+
   },
   progress: {
     margin: 10,
