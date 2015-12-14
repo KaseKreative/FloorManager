@@ -16,8 +16,6 @@ class Overview extends React.Component {
 		return (
       	<View style={styles.container}>
 			 <Text style={styles.headingOne}>WAREHOUSE OVERVIEW</Text>
-			 <Text style={styles.headingTwo}>Overview of section A1-26</Text>
-
 	         <Progress/ >
 
 		</View>
@@ -32,11 +30,6 @@ var styles = StyleSheet.create({
  },
   headingOne: {
    fontSize: 25,
-   textAlign: 'left',
-   margin: 10
- },
- headingTwo: {
-	 fontSize: 15,
    textAlign: 'left',
    margin: 10
  }
