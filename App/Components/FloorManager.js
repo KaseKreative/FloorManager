@@ -1,18 +1,16 @@
 'use strict';
 
 var React 		= require('react-native'),
-	  Main  		= require('./Main'),
-		Overview 	= require('./Overview'),
-		Employees	= require('./Employees'),
-		Shipments = require('./Shipments')
+	Overview 	= require('./Overview'),
+	Employees	= require('./Employees'),
+	Shipments	= require('./Shipments')
 
 var {
 	View,
 	Text,
-	// NavigatorIOS,
-  StyleSheet,
+	StyleSheet,
 	TabBarIOS,
-  Component
+  	Component
 } = React;
 
 class FloorManager extends Component {

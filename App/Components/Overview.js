@@ -1,26 +1,24 @@
 'use strict';
 
 var React = require('react-native');
-
 var {
 	Text,
 	View,
-  StyleSheet,
+  	StyleSheet,
 	PropTypes,
-	ART:{
-		Surface
-	}
 } = React;
 
 var Circle = require('./Shapes/Circle');
+var Progress = require('./Gague');
 
 class Overview extends React.Component {
 	render(){
 		return (
-      <View style={styles.container}>
+      	<View style={styles.container}>
 			 <Text style={styles.headingOne}>WAREHOUSE OVERVIEW</Text>
-			 <Text style={styles.headingTwo}>Overview of section A1-26</Text>
-		  </View>
+	         <Progress/ >
+
+		</View>
     )
 	}
 };
@@ -32,11 +30,6 @@ var styles = StyleSheet.create({
  },
   headingOne: {
    fontSize: 25,
-   textAlign: 'left',
-   margin: 10
- },
- headingTwo: {
-	 fontSize: 15,
    textAlign: 'left',
    margin: 10
  }
