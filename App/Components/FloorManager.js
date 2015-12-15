@@ -45,7 +45,7 @@ class FloorManager extends Component {
 	                    selectedTab: 'Employees',
 	                });
 	          }}>
-	        <Employees/>
+	        <Employees />
 	        </TabBarIOS.Item>
 	        <TabBarIOS.Item
 						title="Shipments"

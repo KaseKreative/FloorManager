@@ -4,18 +4,28 @@ var React = require('react-native');
 var Progress = require('react-native-progress');
 var Button = require('react-native-button');
 var Modal   = require('react-native-modalbox');
+var sectionCapacity = require('./Shipments')
 
 var {
 	Text,
 	View,
 	Image,
   	StyleSheet,
+  	TouchableHighlight,
 } = React;
 
 
 
 
 var Gague = React.createClass({
+
+	sectionCapacity: function(){
+		this.props.navigator.push({
+			title: 'Section -- Capacity',
+			component: sectionCapacity
+		})
+	},
+
 	getInitialState: function() {
     return {
       isOpen: false,
@@ -44,12 +54,14 @@ var Gague = React.createClass({
 
 			<View style={styles.circles}>
 				<Text></Text>
+				<TouchableHighlight onPress={()=>this.sectionCapacity()}>
 				<Progress.Circle
 				size={100}
 				showsText={true}
 				style={styles.progress}
 				progress={ 0.4 }
 				indeterminate={false} />
+			</TouchableHighlight>
 			</View>
 			<Text style={styles.progLable}>Used</Text>
 

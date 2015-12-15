@@ -16,7 +16,9 @@ class Overview extends React.Component {
 		return (
       	<View style={styles.container}>
 			 <Text style={styles.headingOne}>WAREHOUSE OVERVIEW</Text>
-	         <Progress/ >
+	         <Progress 
+                navigator={this.props.navigato}
+           />
 		</View>
     )
 	}
