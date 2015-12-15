@@ -25,8 +25,8 @@ class newSection extends React.Component{
      <View style={styles.container}>
      	<SectionTitle sectionID={this.props.sectionID}/>
      	<SectionImage />
-     	<ProgressCircle />
-     	<CustomModal  />
+     	<ProgressCircle capacity={this.props.capacity}/>
+     	<CustomModal img ={this.props.img} />
      </View>
    );
  }

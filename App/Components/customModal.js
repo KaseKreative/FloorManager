@@ -19,10 +19,10 @@ class Modal extends React.Component{
    return (
      <View style={styles.container}>
 		<CustomModal 
-			triggerModalText={<Image style={styles.workerImage} source={require('../Utils/images/employee.png')} />}
+			triggerModalText={<Image style={styles.workerImage} source={require('image!employee')} />}
 			modalBody={
 				<View style={styles.modalBody}>
-					<Text style={styles.modalHeadingText}>{this.props.imageURI}</Text>
+					<Text style={styles.modalHeadingText}>{this.props.img}</Text>
 					<Text style={styles.modalHeadingText}>Currently Working In Section A1-27</Text>
 					<Text style={styles.modalBodyText}>Worker Name</Text>
 	        		<Text style={styles.modalBodyText}>Worker Occupation</Text>

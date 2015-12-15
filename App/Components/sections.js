@@ -23,9 +23,8 @@ class Sections extends React.Component {
  		return (
       <View style={styles.sectionContainer}>
    
-      <Image source={{uri: URI}}/>
-        <Section sectionID={'A1-27'} imageURI={URI} />
-
+       
+        <Section sectionID={'A1-37'} img={'../Utils/images/employee.png'} capacity={0.5} />
 		  </View>
 
     )

@@ -25,7 +25,7 @@ class progressCircle extends React.Component{
         size={100}
         showsText={true}
         style={styles.progress}
-        progress={ 0.4 }
+        progress={this.props.capacity}
         indeterminate={false} />
         <Text style={styles.progLable}>Used</Text>
       </View>
