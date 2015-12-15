@@ -15,7 +15,7 @@ var {
 
 
 
-class Gague extends React.Component{
+class Sections extends React.Component{
 
 	render(){	
 
@@ -100,4 +100,4 @@ workerImage: {
 
 });
 
-module.exports = Gague;
+module.exports = Sections;

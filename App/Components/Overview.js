@@ -11,7 +11,6 @@ var {
 var Circle = require('./Shapes/Circle');
 var Section = require('./Sections');
 
-
 class Overview extends React.Component {
 	render(){
 		return (
