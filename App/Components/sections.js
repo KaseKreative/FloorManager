@@ -1,37 +1,46 @@
 'use strict';
 
-var React = require('react-native');
+var React = require('react-native'),
+    Button = require('react-native-button'),
+    Section = require('./sectionComponents/sectionComponent');
+
+
 
 var {
 	Text,
 	View,
+	Image,
   StyleSheet,
-  TouchableHighlight
 } = React;
 
+
+
+var URI = "../Utils/images/employee.png";
 class Sections extends React.Component {
-	render(){
-		return (
-      <View style={styles.container}>
-			 <Text style={styles.title}>this is a section</Text>
+  
+	render(){	
+
+ 		return (
+      <View style={styles.sectionContainer}>
+   
+      <Image source={{uri: URI}}/>
+        <Section sectionID={'A1-27'} imageURI={URI} />
+
 		  </View>
 
     )
 	}
 };
 
-
 var styles = StyleSheet.create({
-  container: {
-   flex: 1,
-   marginTop: 60,
- },
-  title: {
-   fontSize: 20,
-   textAlign: 'center',
-   margin: 10,
-   color: 'black'
- },
+sectionContainer: {
+	width: 200,
+	alignItems: 'center',
+    justifyContent: 'center',
+	borderWidth: 1, 
+    borderColor: '#00ff00'
+}
+
 });
 
 module.exports = Sections;

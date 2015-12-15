@@ -8,17 +8,16 @@ var {
 	PropTypes,
 } = React;
 
-var Circle = require('./Shapes/Circle');
-var Progress = require('./Gauge');
+var Section = require('./Sections');
 
 class Overview extends React.Component {
 	render(){
 		return (
-      	<View style={styles.container}>
+       <View style={styles.container}>
 			 <Text style={styles.headingOne}>WAREHOUSE OVERVIEW</Text>
-	         <Progress 
-                navigator={this.props.navigato}
-           />
+	     <Section
+          navigator={this.props.navigator}
+       />
 		</View>
     )
 	}
