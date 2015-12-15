@@ -9,14 +9,15 @@ var {
 } = React;
 
 var Circle = require('./Shapes/Circle');
-var Progress = require('./Gague');
+var Section = require('./Sections');
+
 
 class Overview extends React.Component {
 	render(){
 		return (
-      	<View style={styles.container}>
+       <View style={styles.container}>
 			 <Text style={styles.headingOne}>WAREHOUSE OVERVIEW</Text>
-	         <Progress/ >
+	     <Section/ >
 		</View>
     )
 	}
