@@ -38,17 +38,56 @@ class Shipments extends React.Component {
     super(props);
 
     this.state = {
-      optionSelected: 1
+      optionSelected: 1,
+      podOptionSelected: 1,
     }
+
   }
 
-  onSelect(index) {
+  onSelect(index, ) {
     this.setState({
       optionSelected: index + 1
     });
   }
 
   render() {
+    if (this.state.optionSelected == '3'){
+      return(
+        <View style={{ flex: 1, paddingTop: 20 }}>
+          <Radio onSelect={this.onSelect.bind(this)} defaultSelect={this.state.optionSelected - 1}>
+            <Option color="gray" selectedColor="#008BEF">
+              <Item title="Pod 1" description="Quantity : , Total Weight: "/>
+            </Option>
+            <Option color="gray" selectedColor="#008BEF">
+              <Item title="Pod 2" description="Quantity : , Total Weight: "/>
+            </Option>
+            <Option color="gray" selectedColor="#008BEF">
+              <Item title="Pod 3" description="Quantity : , Total Weight: "/>
+            </Option>
+          </Radio>
+
+          <View style={{ paddingTop: 40 }}>
+            <Text>You have selected Pod {this.state.optionSelected}</Text>
+            <Text>You have selected section {this.state.podOptionSelected}</Text>
+          </View>
+
+          <View style={{ paddingTop: 40 }}>
+            <Radio onSelect={this.onSelect.bind(this)} defaultSelect={this.state.podOptionSelected - 1}>
+              <Option color="gray" selectedColor="#008BEF">
+                <Item title="A1-26" description="700 out of 1000 available"/>
+              </Option>
+              <Option color="gray" selectedColor="#008BEF">
+                <Item title="A1-27" description="200 out of 1000 available"/>
+              </Option>
+              <Option color="gray" selectedColor="#008BEF">
+                <Item title="A1-28" description="70 out of 1000 available"/>
+              </Option>
+            </Radio>
+          </View>
+        </View>
+      )
+    }
+
     return (
       <View style={{ flex: 1, paddingTop: 20 }}>
 				<Radio onSelect={this.onSelect.bind(this)} defaultSelect={this.state.optionSelected - 1}>
@@ -68,7 +107,9 @@ class Shipments extends React.Component {
       </View>
     );
   }
+
 };
+
 
 var styles = StyleSheet.create({
   container: {
@@ -87,6 +128,9 @@ var styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  title: {
+    fontWeight: 'bold',
+  }
 });
 
 module.exports = Shipments;
