@@ -15,7 +15,7 @@ var {
 
 
 
-var Gague = React.createClass({
+var Gauge = React.createClass({
 	getInitialState: function() {
     return {
       isOpen: false,
@@ -150,4 +150,4 @@ workerImage: {
 
 });
 
-module.exports = Gague;
+module.exports = Gauge;
