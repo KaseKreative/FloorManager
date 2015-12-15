@@ -34,7 +34,7 @@ class FloorManager extends Component {
 	              });
 	          }
 	        }>
-	        <Overview/>
+	        <Overview />
 	        </TabBarIOS.Item>
 	        <TabBarIOS.Item
 						title="Employees"

@@ -9,7 +9,7 @@ var {
 } = React;
 
 var Circle = require('./Shapes/Circle');
-var Progress = require('./Gague');
+var Progress = require('./Gauge');
 
 class Overview extends React.Component {
 	render(){
