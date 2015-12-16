@@ -10,7 +10,7 @@ var {
 	Text,
 	View,
 	Image,
-  StyleSheet,
+    StyleSheet,
 } = React;
 
 
@@ -21,14 +21,14 @@ class Sections extends React.Component {
 	render(){	
 
  		return (
-      <View style={styles.sectionContainer}>
-   
-      <Image source={{uri: URI}}/>
-        <Section sectionID={'A1-27'} imageURI={URI} />
+			<View style={styles.sectionContainer}>
 
-		  </View>
+			<Image source={{uri: URI}}/>
+			<Section sectionID={'A1-27'} imageURI={URI} />
 
-    )
+			</View>
+
+    	)
 	}
 };
 
