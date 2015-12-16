@@ -2,10 +2,10 @@
 
 var React = require('react-native');
 var {
-	Text,
-	View,
-  	StyleSheet,
-	PropTypes,
+  Text,
+  View,
+  StyleSheet,
+  PropTypes,
 } = React;
 
 var Section = require('./Sections');

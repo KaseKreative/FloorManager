@@ -10,7 +10,7 @@ var {
 	Text,
 	View,
 	Image,
-  StyleSheet,
+    StyleSheet,
 } = React;
 
 
