@@ -15,9 +15,17 @@ class Overview extends React.Component {
 		return (
        <View style={styles.container}>
 			 <Text style={styles.headingOne}>WAREHOUSE OVERVIEW</Text>
-	     <Section
-          navigator={this.props.navigator}
-       />
+       <View style={styles.section}>
+	     <Section 
+          navigator={this.props.navigator} />
+
+       <Section 
+          navigator={this.props.navigator} />
+      <Section 
+          navigator={this.props.navigator} />
+      <Section 
+          navigator={this.props.navigator} />
+       </View>
 		</View>
     )
 	}
@@ -32,6 +40,10 @@ var styles = StyleSheet.create({
    fontSize: 25,
    textAlign: 'left',
    margin: 10
+ },
+ section: {
+  flex: 1,
+  flexDirection: 'row',
  }
 });
 
