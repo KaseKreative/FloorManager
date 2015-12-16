@@ -8,7 +8,8 @@ var {
   PropTypes,
 } = React;
 
-var PodOptions = require('./podOptionComponents/PodOptions');
+var PodOptions = require('./podOptionComponents/PodOptions'),
+    SectionOptions = require('./podOptionComponents/SectionOptions');
 
 class Shipments extends React.Component {
   render(){
@@ -16,6 +17,7 @@ class Shipments extends React.Component {
        <View style={styles.container}>
        <Text style={styles.headingOne}>SHIPMENTS OVERVIEW</Text>
        <PodOptions/>
+       <SectionOptions/>
     </View>
     )
   }
