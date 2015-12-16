@@ -22,9 +22,7 @@ class Sections extends React.Component {
 
  		return (
       <View style={styles.sectionContainer}>
-   
-       
-        <Section sectionID={'A1-37'} img={'../Utils/images/employee.png'} capacity={0.5} />
+        <Section sectionID={'A1-37'} img={'../Utils/images/employee.png'} navigator={this.props.navigator} capacity={0.5} />
 		  </View>
 
     )

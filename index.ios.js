@@ -11,6 +11,6 @@ var {
   AppRegistry,
 } = React;
 
-var FloorManager = require('./App/Components/FloorManager');
+var FloorManager = require('./App/Components/Navigator');
 
 AppRegistry.registerComponent('FloorManager', () => FloorManager);

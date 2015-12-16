@@ -4,23 +4,30 @@
  */
 'use strict';
 
-var React = require('react-native');
-var Progress = require('react-native-progress');
+var React = require('react-native'),
+    Progress = require('react-native-progress'),
+    Shipments = require('../Shipments');
 
 var {
  StyleSheet,
  Text,
  Image,
- TouchableHighlight,
+ TouchableOpacity,
  View,
 } = React;
 
 
 class progressCircle extends React.Component{
-
+  totalCapacity(){
+    this.props.navigator.push({
+      title: 'Section Capacity',
+      component: Shipments,
+    });
+  }
  render(){
    return (
       <View style={styles.circles}>
+      <TouchableOpacity onPress={()=> this.totalCapacity()}>
         <Progress.Circle
         size={100}
         showsText={true}
@@ -28,6 +35,7 @@ class progressCircle extends React.Component{
         progress={this.props.capacity}
         indeterminate={false} />
         <Text style={styles.progLable}>Used</Text>
+        </TouchableOpacity>
       </View>
       
    );

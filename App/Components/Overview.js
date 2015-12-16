@@ -4,8 +4,9 @@ var React = require('react-native');
 var {
 	Text,
 	View,
-  	StyleSheet,
+  StyleSheet,
 	PropTypes,
+  NavigatorIOS,
 } = React;
 
 var Section = require('./Sections');

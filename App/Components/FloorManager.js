@@ -9,11 +9,12 @@ var {
 	View,
 	Text,
 	StyleSheet,
+	Navigator,
 	TabBarIOS,
   	Component
 } = React;
 
-class FloorManager extends Component {
+class FloorManager extends React.Component {
 
 	constructor(props) {
     super(props);
@@ -34,7 +35,7 @@ class FloorManager extends Component {
 	              });
 	          }
 	        }>
-	        <Overview />
+	        <Overview navigator = {this.props.navigator}/>
 	        </TabBarIOS.Item>
 	        <TabBarIOS.Item
 						title="Employees"
@@ -45,19 +46,18 @@ class FloorManager extends Component {
 	                    selectedTab: 'Employees',
 	                });
 	          }}>
-	        <Employees />
+	        <Employees navigator = {this.props.navigator} />
 	        </TabBarIOS.Item>
 	        <TabBarIOS.Item
 						title="Shipments"
 	          icon={require('../Utils/images/shipment.png')}
 	          selected={this.state.selectedTab === 'Shipments'}
-	          // icon={{uri:'most-viewed'}}
 	          onPress={() => {
 	                this.setState({
 	                    selectedTab: 'Shipments',
 	                });
 	          }}>
-	        <Shipments/>
+	        <Shipments navigator = {this.props.navigator} />
 	        </TabBarIOS.Item>
 	      </TabBarIOS>
 	    );
