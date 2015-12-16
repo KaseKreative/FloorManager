@@ -26,7 +26,7 @@ class newSection extends React.Component{
      	<SectionTitle sectionID={this.props.sectionID}/>
      	<SectionImage />
      	<ProgressCircle navigator={this.props.navigator} capacity={this.props.capacity}/>
-     	<CustomModal img ={this.props.img} />
+     	<CustomModal />
      </View>
    );
  }
@@ -35,10 +35,10 @@ class newSection extends React.Component{
 var styles = StyleSheet.create({
  container: {
    	width: 200,
-	alignItems: 'center',
+	  alignItems: 'center',
     justifyContent: 'center',
-	borderWidth: 1, 
-    borderColor: '#00ff00'
+	  borderWidth: 1, 
+    borderColor: '#00ff00',
  },
  button: {
    height: 40,
@@ -57,6 +57,13 @@ var styles = StyleSheet.create({
    fontSize: 20,
    textAlign: 'center',
    margin: 10
+ },
+ progLable: {
+  position: 'absolute',
+  backgroundColor: 'transparent',
+  top: 170,
+  left: 85,
+  fontSize: 12
  },
 
 

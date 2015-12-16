@@ -51,9 +51,11 @@ progress: {
   margin: 10,
 },
 progLable: {
-  fontSize: 15
-},
-
-
+  position: 'absolute',
+  backgroundColor: 'transparent',
+  top: 170,
+  left: 85,
+  fontSize: 12
+ },
 });
 module.exports = progressCircle;

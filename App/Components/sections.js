@@ -10,7 +10,7 @@ var {
 	Text,
 	View,
 	Image,
-  StyleSheet,
+    StyleSheet,
 } = React;
 
 
@@ -24,8 +24,7 @@ class Sections extends React.Component {
       <View style={styles.sectionContainer}>
         <Section sectionID={'A1-37'} img={'../Utils/images/employee.png'} navigator={this.props.navigator} capacity={0.5} />
 		  </View>
-
-    )
+    	)
 	}
 };
 
@@ -34,8 +33,7 @@ sectionContainer: {
 	width: 200,
 	alignItems: 'center',
     justifyContent: 'center',
-	borderWidth: 1, 
-    borderColor: '#00ff00'
+    marginLeft: 45
 }
 
 });

@@ -26,7 +26,7 @@ class Modal extends React.Component{
 					<Text style={styles.modalHeadingText}>Currently Working In Section A1-27</Text>
 					<Text style={styles.modalBodyText}>Worker Name</Text>
 	        		<Text style={styles.modalBodyText}>Worker Occupation</Text>
-	        		<Image style={styles.workerImage} source={require('../Utils/images/worker1-01.png')} />
+	        		<Image style={styles.workerImage} source={require('image!worker1-1')} />
 	        	</View>
 			} 
 	closeModalText={"Close"} />
