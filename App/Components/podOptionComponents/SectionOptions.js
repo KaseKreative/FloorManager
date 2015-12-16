@@ -11,6 +11,7 @@ var {
   View,
   Component,
   TouchableWithoutFeedback,
+  TouchableHighlight,
   Radio,
 } = React;
 
@@ -24,7 +25,6 @@ class SectionOptions extends React.Component{
   }
 
   render(){
-
     const options = [
       "A1",
       "A2"
@@ -48,6 +48,30 @@ class SectionOptions extends React.Component{
 
     function renderContainer(optionNodes){
       return <View>{optionNodes}</View>;
+    }
+
+    if (this.state.selectedOption) {
+      return (
+
+        <View style={{marginTop: 10, padding: 20, backgroundColor: 'white'}}>
+          <Text style={{paddingBottom: 10, fontWeight:'bold'}}>Select a section to move.</Text>
+          <RadioButtons
+            options={ options }
+            onSelection={ setSelectedPodOptions.bind(this) }
+            selectedOption={this.state.selectedOption }
+            renderOption={ renderOption }
+            renderContainer={ renderContainer }/>
+          <Text>Selected option: {this.state.selectedOption || 'none'}</Text>
+          <TouchableHighlight
+            style={styles.button}
+            >
+                <View>
+                    <Text style={styles.welcome}>Submit</Text>
+                </View>
+          </TouchableHighlight>
+        </View>
+
+      )
     }
 
     return (
@@ -92,7 +116,7 @@ var styles = StyleSheet.create({
   button: {
     height: 45,
     flexDirection: 'row',
-    backgroundColor: 'white',
+    backgroundColor: 'green',
     borderColor: 'white',
     borderWidth: 1,
     borderRadius: 8,
