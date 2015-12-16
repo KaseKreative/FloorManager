@@ -18,6 +18,7 @@ class Shipments extends React.Component {
        <Text style={styles.headingOne}>SHIPMENTS OVERVIEW</Text>
        <PodOptions/>
        <SectionOptions/>
+       <Text></Text>
     </View>
     )
   }
