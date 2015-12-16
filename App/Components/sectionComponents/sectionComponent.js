@@ -39,7 +39,7 @@ var styles = StyleSheet.create({
 	  alignItems: 'center',
     justifyContent: 'center',
 	  borderWidth: 1, 
-    borderColor: '#00ff00'
+    borderColor: '#00ff00',
  },
  button: {
    height: 40,
