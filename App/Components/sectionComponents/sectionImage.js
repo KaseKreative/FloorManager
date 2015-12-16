@@ -18,8 +18,9 @@ class sectionName extends React.Component{
 
  render(){
    return (
-     <View>
+     <View>       
         <Image style={styles.sectionImage} source={require('../../Utils/images/secA1-27-01.png')} />
+
      </View>
    );
  }
@@ -28,7 +29,7 @@ class sectionName extends React.Component{
 var styles = StyleSheet.create({
 sectionImage: {
   flexDirection: 'row',
-},
+}
 
 
 });module.exports = sectionName;

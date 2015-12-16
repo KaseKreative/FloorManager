@@ -20,6 +20,7 @@ class Modal extends React.Component{
      <View style={styles.container}>
 		<CustomModal 
 			triggerModalText={<Image style={styles.workerImage} source={require('../Utils/images/employee.png')} />}
+
 			modalBody={
 				<View style={styles.modalBody}>
 					<Text style={styles.modalHeadingText}>{this.props.imageURI}</Text>

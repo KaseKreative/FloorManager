@@ -13,7 +13,7 @@ var {
   	Component
 } = React;
 
-class FloorManager extends Component {
+class FloorManager extends React.Component {
 
 	constructor(props) {
     super(props);

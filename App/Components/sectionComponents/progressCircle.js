@@ -27,7 +27,6 @@ class progressCircle extends React.Component{
         style={styles.progress}
         progress={ 0.4 }
         indeterminate={false} />
-        <Text style={styles.progLable}>Used</Text>
       </View>
       
    );
@@ -41,11 +40,6 @@ circles: {
 },
 progress: {
   margin: 10,
-},
-progLable: {
-  fontSize: 15
-},
-
-
+}
 });
 module.exports = progressCircle;

@@ -37,8 +37,7 @@ sectionContainer: {
 	width: 200,
 	alignItems: 'center',
     justifyContent: 'center',
-	borderWidth: 1, 
-    borderColor: '#00ff00'
+    marginLeft: 45
 }
 
 });
