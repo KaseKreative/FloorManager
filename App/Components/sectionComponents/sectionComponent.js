@@ -37,21 +37,9 @@ var styles = StyleSheet.create({
    	width: 200,
 	  alignItems: 'center',
     justifyContent: 'center',
+    padding:5,
 	  borderWidth: 1, 
     borderColor: '#00ff00',
- },
- button: {
-   height: 40,
-   alignItems: 'center',
-   backgroundColor: '#4BABFF',
-   justifyContent: 'center',
-   borderWidth: 2,
-   marginTop: 10,
-   borderColor: 'rgba(160,160,230,.6)'
- },
- buttonPads: {
-  paddingRight: 50,
-  paddingLeft: 50
  },
  title: {
    fontSize: 20,
