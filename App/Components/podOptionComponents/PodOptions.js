@@ -26,9 +26,9 @@ class PodOptions extends React.Component{
   render(){
 
     const options = [
-      "Pod 1",
-      "Pod 2"
+      "Pod1","Pod2"
     ];
+
 
     function setSelectedPodOptions(selectedOption){
       this.setState({

@@ -25,80 +25,48 @@ class SectionOptions extends React.Component{
   }
 
   render(){
+
     const options = [
-      "A1",
-      "A2"
+      { label:'A1', value: '1000' },
+      { label:'A2', value: '2000'},
+      { label:'A3', value: '3000' },
     ];
 
-    function setSelectedPodOptions(selectedOption){
+    function setSelectedOption(option){
       this.setState({
-        selectedOption
+        selectedCustomSegment: option,
       });
-    };
-
-    function renderOption(option, selected, onSelect, index){
-      const style = selected ? { fontWeight: 'bold', color: 'green'} : {}
-
-      return (
-        <TouchableWithoutFeedback onPress={onSelect} key={index}>
-          <Text style={style}>{option}</Text>
-        </TouchableWithoutFeedback>
-      );
-    }
-
-    function renderContainer(optionNodes){
-      return <View>{optionNodes}</View>;
-    }
-
-    if (this.state.selectedOption) {
-      return (
-
-        <View style={{marginTop: 10, padding: 20, backgroundColor: 'white'}}>
-          <Text style={{paddingBottom: 10, fontWeight:'bold'}}>Select a section to move.</Text>
-          <RadioButtons
-            options={ options }
-            onSelection={ setSelectedPodOptions.bind(this) }
-            selectedOption={this.state.selectedOption }
-            renderOption={ renderOption }
-            renderContainer={ renderContainer }/>
-          <Text>Selected option: {this.state.selectedOption || 'none'}</Text>
-          <TouchableHighlight
-            style={styles.button}
-            >
-                <View>
-                    <Text style={styles.welcome}>Submit</Text>
-                </View>
-          </TouchableHighlight>
-        </View>
-
-      )
     }
 
     return (
       <View style={{marginTop: 10, padding: 20, backgroundColor: 'white'}}>
-        <Text style={{paddingBottom: 10, fontWeight:'bold'}}>Select a section to move.</Text>
-        <RadioButtons
+        <Text style={{paddingBottom: 10, fontWeight:'bold'}}>Select a Section</Text>
+        <SegmentedControls
+          tint= {'#485951'}
+          selectedTint= {'white'}
+          backTint= {'#92ABA0'}
+
           options={ options }
-          onSelection={ setSelectedPodOptions.bind(this) }
-          selectedOption={this.state.selectedOption }
-          renderOption={ renderOption }
-          renderContainer={ renderContainer }/>
-        <Text>Selected option: {this.state.selectedOption || 'none'}</Text>
-      </View>
-
-      );
+          onSelection={ setSelectedOption.bind(this) }
+          selectedOption={ this.state.selectedCustomSegment }
+          extractText={ (option) => option.label }
+          testOptionEqual={ (a, b) => {
+            if (!a || !b) {
+              return false;
+            }
+            return a.label === b.label
+          }}/>
+        <Text style={{marginTop: 10}}>Available: {this.state.selectedCustomSegment&& this.state.selectedCustomSegment.value || '0'}lbs</Text>
+      </View>);
   }
-
 };
 
 var styles = StyleSheet.create({
   container: {
-    flexDirection:'column',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-    alignSelf: 'stretch',
   },
   welcome: {
     fontSize: 20,
@@ -110,21 +78,5 @@ var styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-  title: {
-    fontWeight: 'bold',
-  },
-  button: {
-    height: 45,
-    flexDirection: 'row',
-    backgroundColor: 'green',
-    borderColor: 'white',
-    borderWidth: 1,
-    borderRadius: 8,
-    marginBottom: 10,
-    marginTop: 10,
-    alignSelf: 'stretch',
-    justifyContent: 'center'
-  },
 });
-
 module.exports = SectionOptions;
