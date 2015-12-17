@@ -32,4 +32,5 @@ sectionImage: {
 }
 
 
-});module.exports = sectionName;
+});
+module.exports = sectionName;

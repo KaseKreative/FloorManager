@@ -22,7 +22,7 @@ class Sections extends React.Component {
 
  	return (
       <View style={styles.sectionContainer}>
-        <Section sectionID={'A1-37'} img={'../Utils/images/employee.png'} navigator={this.props.navigator} capacity={0.5} />
+        <Section sectionID={this.props.sectionID} img={'../Utils/images/employee.png'} navigator={this.props.navigator} capacity={this.props.capacity} />
 		  </View>
     	)
 	}
@@ -32,8 +32,9 @@ var styles = StyleSheet.create({
 sectionContainer: {
 	width: 200,
 	alignItems: 'center',
-    justifyContent: 'center',
-    marginLeft: 45
+  marginTop:40,
+  marginLeft: 45,
+
 }
 
 });

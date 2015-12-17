@@ -17,14 +17,21 @@ class Overview extends React.Component {
 			 <Text style={styles.headingOne}>WAREHOUSE OVERVIEW</Text>
        <View style={styles.section}>
 	     <Section 
-          navigator={this.props.navigator} />
-
+          navigator={this.props.navigator}
+          sectionID={'A1-28'}
+          capacity={.42} />
        <Section 
-          navigator={this.props.navigator} />
+          navigator={this.props.navigator}
+          sectionID={'A1-29'}
+          capacity={.5} />
       <Section 
-          navigator={this.props.navigator} />
+          navigator={this.props.navigator}
+          sectionID={'A1-30'}
+          capacity={.68} />
       <Section 
-          navigator={this.props.navigator} />
+          navigator={this.props.navigator} 
+          sectionID={'A1-31'}
+          capacity={.22}/>
        </View>
 		</View>
     )

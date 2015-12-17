@@ -28,13 +28,14 @@ class progressCircle extends React.Component{
    return (
       <View style={styles.circles}>
       <TouchableOpacity onPress={()=> this.totalCapacity()}>
+       <Text style={styles.progLable}>Full</Text>
         <Progress.Circle
         size={100}
         showsText={true}
         style={styles.progress}
         progress={this.props.capacity}
         indeterminate={false} />
-        <Text style={styles.progLable}>Used</Text>
+       
         </TouchableOpacity>
       </View>
       
@@ -53,9 +54,10 @@ progress: {
 progLable: {
   position: 'absolute',
   backgroundColor: 'transparent',
-  top: 170,
-  left: 85,
-  fontSize: 12
+  top: 70,
+  left: 49,
+  fontSize: 12,
+  color: '#007AFF',
  },
 });
 module.exports = progressCircle;
