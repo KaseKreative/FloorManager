@@ -15,12 +15,15 @@ var {
 
 
 class sectionName extends React.Component{
+	constructor(props){
+		super(props);
+	}
 
  render(){
+ 	var link = this.props.sectionImage;
    return (
      <View>       
-        <Image style={styles.sectionImage} source={require('../../Utils/images/secA1-27-01.png')} />
-
+        <Image style={styles.sectionImage} source={{uri: 'http://localhost:8081/App/Utils/images/'+link}} />
      </View>
    );
  }
@@ -28,7 +31,10 @@ class sectionName extends React.Component{
 
 var styles = StyleSheet.create({
 sectionImage: {
-  flexDirection: 'row',
+	marginTop: 5,
+	width: 100,
+	height: 62
+  // flexDirection: 'row',
 }
 
 
