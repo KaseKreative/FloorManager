@@ -19,6 +19,7 @@ class Modal extends React.Component{
 	super(props);
 	}
  render(){
+ 	console.log(this.props.sectionEmployees);
    var link = this.props.sectionEmployees.image;
    return (
      <View style={styles.container}>
