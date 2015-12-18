@@ -19,14 +19,13 @@ var {
 
 
 class newSection extends React.Component{
-
- render(){
+ render(){  
    return (
      <View style={styles.container}>
      	<SectionTitle sectionID={this.props.sectionID}/>
      	<SectionImage sectionImage={this.props.sectionImage}/>
      	<ProgressCircle navigator={this.props.navigator} capacity={this.props.capacity}/>
-     	<CustomModal />
+     	<CustomModal sectionEmployees={this.props.sectionEmployees} sectionID={this.props.sectionID}/>
      </View>
    );
  }

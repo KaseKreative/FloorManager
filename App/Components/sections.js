@@ -19,10 +19,9 @@ var URI = "../Utils/images/employee.png";
 class Sections extends React.Component {
   
 	render(){	
-
  	return (
       <View style={styles.sectionContainer}>
-        <Section sectionID={this.props.sectionID} sectionImage={this.props.sectionImage} navigator={this.props.navigator} capacity={this.props.capacity} />
+        <Section sectionID={this.props.sectionID} sectionImage={this.props.sectionImage} navigator={this.props.navigator} capacity={this.props.capacity} sectionEmployees={this.props.sectionEmployees}/>
 		  </View>
     	)
 	}
@@ -30,8 +29,8 @@ class Sections extends React.Component {
 
 var styles = StyleSheet.create({
 sectionContainer: {
-	width: 200,
-	alignItems: 'center',
+  width: 200,
+  alignItems: 'center',
   marginTop:40,
   marginLeft: 45,
 
