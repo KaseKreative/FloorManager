@@ -30,11 +30,11 @@ sectionName: {
   textAlign: 'center',
   color: '#DFE3E8',
   fontSize: 15,
+  fontWeight: '600',
   padding: 10,
-  width: 197,
+  width: 196,
   marginTop: -5,
   backgroundColor: '#6B6864',
-
 },
 
 
