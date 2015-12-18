@@ -27,8 +27,14 @@ class sectionTitle extends React.Component{
 
 var styles = StyleSheet.create({
 sectionName: {
-  flexDirection: 'row',
+  textAlign: 'center',
+  color: '#DFE3E8',
   fontSize: 15,
+  padding: 10,
+  width: 197,
+  marginTop: -5,
+  backgroundColor: '#6B6864',
+
 },
 
 

@@ -31,11 +31,12 @@ class progressCircle extends React.Component{
        <Text style={styles.progLable}>Full</Text>
         <Progress.Circle
         size={100}
+        color={'#243A2D'}
+        thickness={6}
         showsText={true}
         style={styles.progress}
         progress={this.props.capacity}
         indeterminate={false} />
-       
         </TouchableOpacity>
       </View>
       
@@ -49,7 +50,7 @@ circles: {
   flexDirection: 'row',
 },
 progress: {
-  margin: 10,
+  margin: 10
 },
 progLable: {
   position: 'absolute',
@@ -57,7 +58,8 @@ progLable: {
   top: 70,
   left: 49,
   fontSize: 12,
-  color: '#007AFF',
+  fontWeight: '800',
+  color: '#6B6864',
  },
 });
 module.exports = progressCircle;

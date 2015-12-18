@@ -38,8 +38,9 @@ var styles = StyleSheet.create({
 	  alignItems: 'center',
     justifyContent: 'center',
     padding:5,
-	  borderWidth: 1, 
-    borderColor: '#00ff00',
+    backgroundColor: '#FCFBFA',
+	  borderWidth: 2, 
+    borderColor: '#243A2D',
  },
  title: {
    fontSize: 20,
